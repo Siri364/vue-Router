@@ -27,7 +27,6 @@
         </v-card-subtitle>
 
         <v-card-actions>
-         
           <v-btn
             color="green accent-2"
             text
@@ -40,7 +39,7 @@
           </v-btn>
           <div>
             <button class="btn btn-success" @click="addCart(product)">
-              หยิบตะกร้า
+              ตะกร้า
             </button>
           </div>
 
@@ -62,44 +61,49 @@
       <v-container>
         <v-card>
           <div class="container col-md-12" v-if="carts != 0">
-          <h4>ตะกร้าสินค้า</h4>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">ไอดี</th>
-                <th scope="col">ภาพสินค้า</th>
-                <th scope="col">ชื่อ</th>
-                <th scope="col">ราคา</th>
-                <th scope="col">จำนวน</th>
-                <th scope="col">ยอดรวม</th>
-                <th scope="col">ลบ</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(item, index) in carts" :key="index">
-                <td>{{ item.id }}</td>
-                <td><img :src="item.image" height="50px" width="50px" /></td>
-                <td>{{ item.name }}</td>
-                <td>{{ item.price }}</td>
-                <td>
-                  <i class="fa fa-plus qty-plus" @click="plusqty(item)"></i>
-                  {{ item.qty }}
-                  <i class="fa fa-minus qty-minus" @click="minusqty(item)"></i>
-                </td>
-                <td>{{ item.total }}</td>
-                <td>
-                  <button @click="removeproduct(item)" class="btn-Success">
-                    <i class="fa fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-            
-          <v-card-footer>
-            <center><h3>PAY : {{total()}} $</h3></center>
-          </v-card-footer>
-        </div>
+            <h4>สินค้า</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ไอดี</th>
+                  <th scope="col">ภาพสินค้า</th>
+                  <th scope="col">ชื่อ</th>
+                  <th scope="col">ราคา</th>
+                  <th scope="col">จำนวน</th>
+                  <th scope="col">ยอดรวม</th>
+                  <th scope="col">ลบ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(item, index) in carts" :key="index">
+                  <td>{{ item.id }}</td>
+                  <td><img :src="item.image" height="50px" width="50px" /></td>
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.price }}</td>
+                  <td>
+                    <i class="fa fa-plus qty-plus" @click="plusqty(item)"></i>
+                    {{ item.qty }}
+                    <i
+                      class="fa fa-minus qty-minus"
+                      @click="minusqty(item)"
+                    ></i>
+                  </td>
+                  <td>{{ item.total }}</td>
+                  <td>
+                    <button @click="removeproduct(item)" class="btn-Success">
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <v-card-footer>
+              <center>
+                <h3>PAY : {{ total() }} $</h3>
+              </center>
+            </v-card-footer>
+          </div>
         </v-card>
       </v-container>
       <v-container grid-list-xs class="green accent-2">
@@ -731,77 +735,77 @@ export default {
         var index = this.carts.indexOf(item);
         this.carts.splice(index, 1);
         if (item.id == 1) {
-          this.aa1 = o;
+          this.aa1 = 0;
         }
         if (item.id == 2) {
-          this.bb2 = o;
+          this.bb2 = 0;
         }
         if (item.id == 3) {
-          this.cc3 = o;
+          this.cc3 = 0;
         }
         if (item.id == 4) {
-          this.dd4 = o;
+          this.dd4 = 0;
         }
         if (item.id == 5) {
-          this.ee5 = o;
+          this.ee5 = 0;
         }
         if (item.id == 6) {
-          this.ff6 = o;
+          this.ff6 = 0;
         }
         if (item.id == 7) {
-          this.gg7 = o;
+          this.gg7 = 0;
         }
         if (item.id == 8) {
-          this.hh8 = o;
+          this.hh8 = 0;
         }
         if (item.id == 9) {
-          this.ii9 = o;
+          this.ii9 = 0;
         }
         if (item.id == 10) {
-          this.jj10 = o;
+          this.jj10 = 0;
         }
         if (item.id == 11) {
-          this.kk11 = o;
+          this.kk11 = 0;
         }
         if (item.id == 12) {
-          this.ll12 = o;
+          this.ll12 = 0;
         }
         if (item.id == 13) {
-          this.mm13 = o;
+          this.mm13 = 0;
         }
         if (item.id == 14) {
-          this.nn14 = o;
+          this.nn14 = 0;
         }
         if (item.id == 15) {
-          this.oo15 = o;
+          this.oo15 = 0;
         }
         if (item.id == 16) {
-          this.pp16 = o;
+          this.pp16 = 0;
         }
         if (item.id == 17) {
-          this.qq17 = o;
+          this.qq17 = 0;
         }
         if (item.id == 18) {
-          this.rr18 = o;
+          this.rr18 = 0;
         }
         if (item.id == 19) {
-          this.ss19 = o;
+          this.ss19 = 0;
         }
         if (item.id == 20) {
-          this.tt20 = o;
+          this.tt20 = 0;
         }
         if (item.id == 21) {
-          this.uu21 = o;
+          this.uu21 = 0;
         }
       }
     },
-    total:function(){
-      var sum=0;
-      this.carts.forEach(function(product){
-        sum+=product.total;
-      })
+    total: function () {
+      var sum = 0;
+      this.carts.forEach(function (product) {
+        sum += product.total;
+      });
       return sum;
-    }
+    },
   },
 };
 </script>
